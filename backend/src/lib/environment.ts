@@ -15,6 +15,11 @@ class Environment {
       HOST: str({default: 'localhost'}),
       JWT_SECRET: str(),
       LOG_LEVEL: str({default: 'info'}),
+      MONGO_DB: str(),
+      MONGO_HOST: str(),
+      MONGO_PASSWORD: str(),
+      MONGO_PORT: port({default: 27017}),
+      MONGO_USER: str(),
       NODE_ENV: str({choices: ['development', 'testing', 'production']}),
       PORT: port({default: 8080}),
     });

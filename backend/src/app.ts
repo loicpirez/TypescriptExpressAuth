@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 import environment from './lib/environment';
+import initializeMongoose from './lib/mongoose';
 import initializeExpress from './lib/express';
 
 import logger from './lib/logger';
@@ -35,9 +36,9 @@ const startServer: Function = async (): Promise<Server> => {
 
     global.logger.info('📱 Welcome to the backend API !');
 
-    // global.logger.info('Connecting to MongoDB...');
-    // await initializeMongoose();
-    // global.logger.info('Database loaded and connected.');
+    global.logger.info('Connecting to MongoDB...');
+    await initializeMongoose();
+    global.logger.info('Database loaded and connected.');
 
     global.logger.info('Initializing Express server...');
     global.expressApp = express();
