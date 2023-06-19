@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+import '../src/types/global';
+
 import environment from './lib/environment';
 import initializeMongoose from './lib/mongoose';
 import initializeExpress from './lib/express';

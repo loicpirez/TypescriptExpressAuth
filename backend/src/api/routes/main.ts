@@ -1,4 +1,5 @@
 import {NextFunction, Request, Response, Router as router} from 'express';
+import isAuth from '../middlewares/is-auth';
 
 /**
  * Route which display Hello World.
@@ -12,7 +13,7 @@ const mainRoute: Function = async (appRouter: router): Promise<void> => {
 
   appRouter.use('/main', route);
 
-  route.get('/hello', (req: Request, res: Response, next: NextFunction) => {
+  route.get('/hello', isAuth, (req: Request, res: Response, next: NextFunction) => {
     res.json({status: 'hello'});
   });
 };

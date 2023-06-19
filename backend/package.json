@@ -22,12 +22,17 @@
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node --files src/app.ts'"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.2",
+    "argon2": "^0.30.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "envalid": "^7.3.1",
     "eslint": "^8.43.0",
     "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.3.0",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1",
